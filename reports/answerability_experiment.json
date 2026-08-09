@@ -1,0 +1,167 @@
+{
+  "model": "qwen2.5:0.5b",
+  "n_legitimate": 20,
+  "n_false_refusals": 16,
+  "false_refusal_rate": 0.8,
+  "n_out_of_scope": 2,
+  "n_correctly_refused": 2,
+  "out_of_scope_catch_rate": 1.0,
+  "legitimate_results": [
+    {
+      "question": "What is the four-fifths rule and what ratio triggers investigation?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.7128,
+      "type": "lexical"
+    },
+    {
+      "question": "What is the difference between disparate treatment and disparate impact?",
+      "raw": "YES",
+      "verdict": "YES",
+      "top_score": 0.847,
+      "type": "lexical"
+    },
+    {
+      "question": "What are the prohibited basis factors under Regulation B?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.5534,
+      "type": "lexical"
+    },
+    {
+      "question": "What must a model card record?",
+      "raw": "YES",
+      "verdict": "YES",
+      "top_score": 0.719,
+      "type": "lexical"
+    },
+    {
+      "question": "What is the delinquency look-back window?",
+      "raw": "YES",
+      "verdict": "YES",
+      "top_score": 0.6684,
+      "type": "lexical"
+    },
+    {
+      "question": "What does demographic parity difference measure versus equalized odds?",
+      "raw": "YES",
+      "verdict": "YES",
+      "top_score": 0.7955,
+      "type": "lexical"
+    },
+    {
+      "question": "What is the debt-to-income threshold for standard pricing?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.5686,
+      "type": "lexical"
+    },
+    {
+      "question": "If someone gets turned down, how quickly must the company tell them?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.4275,
+      "type": "paraphrase"
+    },
+    {
+      "question": "Can we just say 'you didn't meet our standards' when we reject somebody?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.2183,
+      "type": "paraphrase"
+    },
+    {
+      "question": "Is it a problem if we use where a person lives to decide their score?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.2981,
+      "type": "paraphrase"
+    },
+    {
+      "question": "How much borrowing history does somebody need before we can lend to them?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.6066,
+      "type": "paraphrase"
+    },
+    {
+      "question": "What do we do if our testing shows one group is being treated worse?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.432,
+      "type": "paraphrase"
+    },
+    {
+      "question": "How often do we have to check our scoring systems again?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.2985,
+      "type": "paraphrase"
+    },
+    {
+      "question": "Are we allowed to tell the customer their neighborhood hurt their application?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.4361,
+      "type": "paraphrase"
+    },
+    {
+      "question": "Do we need to explain decisions for one specific person, or is overall importance enough?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.3731,
+      "type": "paraphrase"
+    },
+    {
+      "question": "A model has no protected attribute among its inputs. Can it still be discriminatory?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.4626,
+      "type": "hard"
+    },
+    {
+      "question": "Our disparate impact ratio is 0.83. Does that mean we are in the clear?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.4719,
+      "type": "hard"
+    },
+    {
+      "question": "A feature built from ZIP code correlates 0.45 with a protected class. What is the rule?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.5479,
+      "type": "hard"
+    },
+    {
+      "question": "We fixed the bias but the model got noticeably worse. Is that automatically the right call?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.3286,
+      "type": "hard"
+    },
+    {
+      "question": "An applicant has a 0.42 debt-to-income ratio. What happens to their application?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.5743,
+      "type": "hard"
+    }
+  ],
+  "out_of_scope_results": [
+    {
+      "question": "What is the company's policy on cryptocurrency trading desks?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.1568,
+      "type": "out_of_scope"
+    },
+    {
+      "question": "How many vacation days do underwriters get?",
+      "raw": "NO",
+      "verdict": "NO",
+      "top_score": 0.3054,
+      "type": "out_of_scope"
+    }
+  ]
+}

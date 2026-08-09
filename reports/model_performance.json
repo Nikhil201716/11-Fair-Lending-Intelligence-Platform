@@ -1,0 +1,79 @@
+{
+  "n_rows": 400000,
+  "target": "defaulted",
+  "excluded_always": [
+    "demographic_group",
+    "latitude",
+    "longitude",
+    "neighborhood_id",
+    "group_b_share"
+  ],
+  "note": "demographic_group is NEVER a model input in either variant; it is used only by the fairness audit.",
+  "with_proxy": {
+    "variant": "with_proxy",
+    "n_features": 15,
+    "features": [
+      "debt_to_income",
+      "num_delinquencies_2y",
+      "credit_history_length_years",
+      "log_income",
+      "employment_length_years",
+      "loan_to_income",
+      "payment_to_income",
+      "loan_amount",
+      "loan_term_months",
+      "has_delinquency",
+      "thin_file",
+      "neighborhood_risk_score",
+      "nbh_median_income",
+      "nbh_avg_dti",
+      "income_vs_nbh"
+    ],
+    "n_train": 300000,
+    "n_test": 100000,
+    "models": {
+      "logistic_regression": {
+        "roc_auc": 0.7114,
+        "pr_auc": 0.3058,
+        "brier": 0.10731
+      },
+      "gradient_boosting": {
+        "roc_auc": 0.7098,
+        "pr_auc": 0.3033,
+        "brier": 0.10749
+      }
+    }
+  },
+  "without_proxy": {
+    "variant": "without_proxy",
+    "n_features": 11,
+    "features": [
+      "debt_to_income",
+      "num_delinquencies_2y",
+      "credit_history_length_years",
+      "log_income",
+      "employment_length_years",
+      "loan_to_income",
+      "payment_to_income",
+      "loan_amount",
+      "loan_term_months",
+      "has_delinquency",
+      "thin_file"
+    ],
+    "n_train": 300000,
+    "n_test": 100000,
+    "models": {
+      "logistic_regression": {
+        "roc_auc": 0.7114,
+        "pr_auc": 0.3058,
+        "brier": 0.10731
+      },
+      "gradient_boosting": {
+        "roc_auc": 0.7094,
+        "pr_auc": 0.3022,
+        "brier": 0.10754
+      }
+    }
+  },
+  "auc_cost_of_removing_proxy": 0.0004
+}

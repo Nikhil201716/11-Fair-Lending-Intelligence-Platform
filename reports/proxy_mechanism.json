@@ -1,0 +1,90 @@
+{
+  "approve_threshold": 0.15,
+  "hypothesis": "the geographic proxy matters more where legitimate signal is weak",
+  "strata": {
+    "thin_file": {
+      "n": 2746,
+      "actual_default_rate": 0.19956,
+      "with_proxy": {
+        "approval_rates": {
+          "Group A": 0.46082,
+          "Group B": 0.37097
+        },
+        "disparate_impact_ratio": 0.80501,
+        "parity_difference": 0.08986,
+        "bootstrap_ci95": [
+          0.73601,
+          0.87714
+        ],
+        "bootstrap_p_below_0.80": 0.4495,
+        "n_bootstrap": 2000
+      },
+      "without_proxy": {
+        "approval_rates": {
+          "Group A": 0.45684,
+          "Group B": 0.34758
+        },
+        "disparate_impact_ratio": 0.76084,
+        "parity_difference": 0.10926,
+        "bootstrap_ci95": [
+          0.69509,
+          0.83586
+        ],
+        "bootstrap_p_below_0.80": 0.847,
+        "n_bootstrap": 2000
+      },
+      "di_change_from_removing_proxy": -0.04417
+    },
+    "established": {
+      "n": 97254,
+      "actual_default_rate": 0.13362,
+      "with_proxy": {
+        "approval_rates": {
+          "Group A": 0.72607,
+          "Group B": 0.64696
+        },
+        "disparate_impact_ratio": 0.89104,
+        "parity_difference": 0.07911,
+        "bootstrap_ci95": [
+          0.8838,
+          0.89914
+        ],
+        "bootstrap_p_below_0.80": 0.0,
+        "n_bootstrap": 2000
+      },
+      "without_proxy": {
+        "approval_rates": {
+          "Group A": 0.72725,
+          "Group B": 0.64666
+        },
+        "disparate_impact_ratio": 0.88919,
+        "parity_difference": 0.08059,
+        "bootstrap_ci95": [
+          0.88162,
+          0.89665
+        ],
+        "bootstrap_p_below_0.80": 0.0,
+        "n_bootstrap": 2000
+      },
+      "di_change_from_removing_proxy": -0.00185
+    }
+  },
+  "shap_reliance_by_stratum": {
+    "thin_file": {
+      "n_shap_sample": 2000,
+      "geographic_share_of_total_attribution": 0.05147,
+      "neighborhood_risk_score_mean_abs_shap": 0.00454
+    },
+    "established": {
+      "n_shap_sample": 2000,
+      "geographic_share_of_total_attribution": 0.05939,
+      "neighborhood_risk_score_mean_abs_shap": 0.004234
+    }
+  },
+  "verdict": {
+    "thin_file_di_change": -0.04417,
+    "established_di_change": -0.00185,
+    "geo_attribution_thin_file": 0.05147,
+    "geo_attribution_established": 0.05939
+  }
+}

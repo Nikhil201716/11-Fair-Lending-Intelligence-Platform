@@ -1,0 +1,50 @@
+{
+  "join_strategy": {
+    "shuffle_join": {
+      "median_seconds": 22.8,
+      "runs": [
+        37.294,
+        21.24,
+        22.8
+      ]
+    },
+    "broadcast_join": {
+      "median_seconds": 23.919,
+      "runs": [
+        23.919,
+        21.217,
+        24.25
+      ]
+    }
+  },
+  "partition_pruning": {
+    "target_month": "2025-01",
+    "rows_in_partition": 17038,
+    "rows_total": 400000,
+    "selectivity": 0.0426,
+    "pruned_partition_filter": {
+      "median_seconds": 33.515,
+      "runs": [
+        50.106,
+        33.515,
+        28.546
+      ]
+    },
+    "full_scan_nonpartition_filter": {
+      "median_seconds": 40.591,
+      "runs": [
+        30.303,
+        40.591,
+        40.921
+      ]
+    }
+  },
+  "summary": {
+    "broadcast_speedup_x": 0.95,
+    "partition_pruning_speedup_x": 1.21,
+    "n_runs_per_variant": 3,
+    "note": "local[*] on a 2GB WSL instance; relative comparison is the finding, absolute seconds are not cluster-representative.",
+    "storage": "windows_mnt_c",
+    "methodology_note": "Run against /mnt/c, WSL2 9p bridge to the Windows filesystem. Variance here exceeds the effect size, so these numbers are retained only as the negative control for the ext4 re-run."
+  }
+}

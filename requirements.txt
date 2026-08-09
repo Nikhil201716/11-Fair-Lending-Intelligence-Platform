@@ -1,0 +1,32 @@
+numpy>=2.0
+pandas>=2.2
+pyarrow>=15.0
+scikit-learn>=1.5
+scipy>=1.14
+shap>=0.46
+h3>=4.0
+rank-bm25>=0.2.2
+sentence-transformers>=3.0
+torch>=2.0
+statsmodels>=0.14
+ollama>=0.6
+streamlit>=1.35
+plotly>=5.22
+matplotlib>=3.9
+
+# pyspark is intentionally NOT listed here. On Windows, Spark reads and
+# computes fine but every WRITE fails without winutils.exe, so the Spark
+# stage runs inside WSL where it is installed separately:
+#     wsl -d Ubuntu -- sudo apt-get install -y openjdk-17-jdk-headless
+#     bash scripts/wsl_setup.sh          # pip installs pyspark in WSL
+# See docs/architecture.md for the full diagnosis.
+#
+# NOTE on pandas: PySpark 4.2 warns it does not fully support pandas >= 3.0
+# (this environment has 3.0.3). Every Spark -> pandas handoff therefore goes
+# through Parquet on disk rather than .toPandas().
+#
+# The LLM steps require Ollama (a separate application, not a pip package):
+#     winget install Ollama.Ollama
+#     ollama pull qwen2.5:0.5b
+#
+# sentence-transformers downloads all-MiniLM-L6-v2 (~90MB) on first use.

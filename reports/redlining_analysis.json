@@ -1,0 +1,25 @@
+{
+  "h3_resolution": 7,
+  "min_apps_per_cell": 100,
+  "n_cells_total": 225,
+  "n_cells_scored": 127,
+  "n_applications_scored": 97711,
+  "correlations_across_cells": {
+    "group_b_share_vs_approval_rate_with_proxy": -0.62927,
+    "group_b_share_vs_approval_rate_without_proxy": -0.65405,
+    "group_b_share_vs_actual_default_rate": 0.36216,
+    "group_b_share_vs_avg_income": -0.82169
+  },
+  "policy_trigger": {
+    "threshold_abs_corr": 0.3,
+    "with_proxy_triggers_review": true,
+    "without_proxy_triggers_review": true,
+    "policy_reference": "FL-200-2"
+  },
+  "spatial_spread": {
+    "approval_rate_with_proxy": 0.14597,
+    "approval_rate_without_proxy": 0.1514
+  },
+  "mean_abs_approval_change_from_removing_proxy": 0.00519,
+  "interpretation_note": "A strong negative correlation between a cell's Group B share and its approval rate does NOT by itself prove the model is redlining: Group B also has genuinely lower income and higher default in this data by construction. The diagnostic that separates the two is whether the correlation weakens when the geographic features are removed from the model."
+}

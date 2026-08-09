@@ -1,0 +1,112 @@
+{
+  "n_shap_sample": 3000,
+  "model": "gradient_boosting (with_proxy variant)",
+  "global_importance": [
+    {
+      "feature": "num_delinquencies_2y",
+      "mean_abs_shap": 0.390467,
+      "rank": 1
+    },
+    {
+      "feature": "debt_to_income",
+      "mean_abs_shap": 0.313033,
+      "rank": 2
+    },
+    {
+      "feature": "credit_history_length_years",
+      "mean_abs_shap": 0.30002,
+      "rank": 3
+    },
+    {
+      "feature": "log_income",
+      "mean_abs_shap": 0.118333,
+      "rank": 4
+    },
+    {
+      "feature": "income_vs_nbh",
+      "mean_abs_shap": 0.06258,
+      "rank": 5
+    },
+    {
+      "feature": "loan_to_income",
+      "mean_abs_shap": 0.011324,
+      "rank": 6
+    },
+    {
+      "feature": "employment_length_years",
+      "mean_abs_shap": 0.007412,
+      "rank": 7
+    },
+    {
+      "feature": "loan_amount",
+      "mean_abs_shap": 0.006541,
+      "rank": 8
+    },
+    {
+      "feature": "payment_to_income",
+      "mean_abs_shap": 0.00455,
+      "rank": 9
+    },
+    {
+      "feature": "neighborhood_risk_score",
+      "mean_abs_shap": 0.004257,
+      "rank": 10
+    },
+    {
+      "feature": "nbh_median_income",
+      "mean_abs_shap": 0.003901,
+      "rank": 11
+    },
+    {
+      "feature": "nbh_avg_dti",
+      "mean_abs_shap": 0.002737,
+      "rank": 12
+    },
+    {
+      "feature": "loan_term_months",
+      "mean_abs_shap": 0.000466,
+      "rank": 13
+    },
+    {
+      "feature": "has_delinquency",
+      "mean_abs_shap": 0.0,
+      "rank": 14
+    },
+    {
+      "feature": "thin_file",
+      "mean_abs_shap": 0.0,
+      "rank": 15
+    }
+  ],
+  "ground_truth_coefficients": {
+    "intercept": -2.55,
+    "debt_to_income": 3.1,
+    "num_delinquencies_2y": 0.62,
+    "credit_history_length_years": -0.075,
+    "log_income_centered": -0.55,
+    "neighborhood_risk_score": 0.0
+  },
+  "validation_checks": {
+    "dti_is_top_2": {
+      "claim": "debt_to_income (true coeff 3.10) ranks in the top 2",
+      "rank": 2,
+      "passed": true
+    },
+    "proxy_ranks_low": {
+      "claim": "neighborhood_risk_score (TRUE causal effect 0.0) ranks in the bottom half",
+      "rank": 10,
+      "n_features": 15,
+      "passed": true
+    },
+    "delinquency_above_proxy": {
+      "claim": "num_delinquencies_2y (true coeff 0.62) outranks the zero-effect proxy",
+      "delinquency_rank": 1,
+      "proxy_rank": 10,
+      "passed": true
+    }
+  },
+  "all_checks_passed": true,
+  "n_declined_examples": 25,
+  "n_declined_with_geographic_reason": 7,
+  "geographic_reason_rate": 0.28
+}

@@ -1,0 +1,43 @@
+{
+  "spark_version": "4.2.0",
+  "n_rows": 400000,
+  "n_columns": 30,
+  "n_partitions_written": 24,
+  "write_seconds": 247.41,
+  "columns": [
+    "annual_income",
+    "application_date",
+    "application_id",
+    "application_month",
+    "center_lat",
+    "center_lon",
+    "credit_history_length_years",
+    "debt_to_income",
+    "defaulted",
+    "demographic_group",
+    "employment_length_years",
+    "est_monthly_payment",
+    "existing_debt",
+    "group_b_share",
+    "has_delinquency",
+    "income_vs_nbh",
+    "latitude",
+    "loan_amount",
+    "loan_purpose",
+    "loan_term_months",
+    "loan_to_income",
+    "log_income",
+    "longitude",
+    "nbh_avg_dti",
+    "nbh_median_income",
+    "neighborhood_id",
+    "neighborhood_risk_score",
+    "num_delinquencies_2y",
+    "payment_to_income",
+    "thin_file"
+  ],
+  "default_rate_by_group": {
+    "Group A": 0.125389,
+    "Group B": 0.147664
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "join_strategy": {
+    "shuffle_join": {
+      "median_seconds": 3.465,
+      "runs": [
+        4.216,
+        3.891,
+        3.465,
+        2.936,
+        2.943
+      ]
+    },
+    "broadcast_join": {
+      "median_seconds": 2.452,
+      "runs": [
+        2.738,
+        3.884,
+        2.403,
+        2.452,
+        2.355
+      ]
+    }
+  },
+  "partition_pruning": {
+    "target_month": "2025-01",
+    "rows_in_partition": 17038,
+    "rows_total": 400000,
+    "selectivity": 0.0426,
+    "pruned_partition_filter": {
+      "median_seconds": 1.433,
+      "runs": [
+        1.133,
+        1.436,
+        1.747,
+        1.342,
+        1.433
+      ]
+    },
+    "full_scan_nonpartition_filter": {
+      "median_seconds": 1.766,
+      "runs": [
+        2.803,
+        2.513,
+        1.766,
+        1.744,
+        1.738
+      ]
+    }
+  },
+  "summary": {
+    "broadcast_speedup_x": 1.41,
+    "partition_pruning_speedup_x": 1.23,
+    "n_runs_per_variant": 5,
+    "storage": "wsl_native_ext4",
+    "note": "local[*] on a 2GB WSL instance; relative comparison is the finding, absolute seconds are not cluster-representative."
+  }
+}
