@@ -1,6 +1,6 @@
 # Fair Lending Intelligence Platform
 
-**A combined Data Engineer / ML Engineer / AI Engineer / Responsible-AI portfolio project:**
+**A project I built to learn algorithmic fairness as a measurement problem:**
 PySpark feature engineering at scale, credit risk modeling with SHAP explainability, a fair-lending
 audit scored against injected ground truth, H3 geospatial redlining analysis, and a hybrid-retrieval
 policy assistant with real red-teaming — unified around one lender, one dataset, one rulebook.
@@ -23,7 +23,7 @@ receives.
 
 ---
 
-## 2. What Makes This "Industry-Level," Not a Tutorial Clone
+## 2. What I Was Trying to Get Right
 
 - **The central hypothesis was refuted, with evidence.** A feature correlated **0.536** with the
   protected group and with **zero true causal effect** was expected to drive disparate impact.
@@ -255,7 +255,7 @@ which is exactly what the geospatial result demonstrates.
 
 ---
 
-## 10. Skills Demonstrated
+## 10. What I Learned Building This
 
 **Data Engineering / Big Data:** PySpark 4.2 · partitioned Parquet lakehouse layout · window
 functions · broadcast vs shuffle join tuning · partition pruning · benchmark methodology (warm-up,
